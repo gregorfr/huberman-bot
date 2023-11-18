@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import pytz
 
 # Function to generate random protocol instructions
-def generate_protocols(num_instructions, file_path):
+def generate_protocol(file_path):
     def generate_instruction():
         x = random.randint(1, 5)  # Random number between 1-5
         z = random.randint(1, 120)  # Random number between 1-120
@@ -12,10 +12,9 @@ def generate_protocols(num_instructions, file_path):
         return f"{x} times a week, for {z} minutes, do {y}"
 
     with open(file_path, 'w') as file:
-        for _ in range(num_instructions):
+        for _ in range(5):  # Generate 5 instructions for each protocol
             instruction = generate_instruction()
             file.write(instruction + '\n')
-    print(f"Protocol instructions created at {file_path}")
 
 # Function to create iCal data
 def create_ical(file_path):
@@ -53,9 +52,11 @@ if choice == '1':
     ical_file_path = 'Data/work_schedule.ics'
     create_ical(ical_file_path)
 elif choice == '2':
-    num_instructions = 1000
-    protocol_file_path = 'Data/random_protocols.txt'
-    generate_protocols(num_instructions, protocol_file_path)
+    num_protocols = 10
+
+    for i in range(1, num_protocols + 1):
+        protocol_file_path = f'Data/random_protocol{i}.txt'
+        generate_protocol(protocol_file_path)
+        print(f"Protocol instructions created at {protocol_file_path}")
 else:
     print("Invalid choice. Please enter '1' or '2'.")
-
