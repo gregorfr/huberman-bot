@@ -9,4 +9,4 @@ This project will be realized in multiple phases, each adding a layer of functio
 
 # Phase 1: Calendar Optimization
 
-Finding time in your day-to-day life to exercise, live healthy, do yoga or go for walks is always a struggle for anyone. In this phase, i will create an algorithm that will try to optimally fit a huberman-protocol into your calendar, saving you the struggle to worry about how to find time for everything. 
+Finding time in your day-to-day life to exercise, live healthy, do yoga or go for walks is always a struggle for anyone. In this phase, I will create an algorithm that will try to optimally fit a huberman-protocol into your calendar, saving you the struggle to worry about how to find time for everything. 
